@@ -34,11 +34,11 @@ sudo docker-compose stop
 sudo docker-compose exec server bash
 ```
 ## Crear proyecto con Flutter:
-- Para verificar flutter, dentro del contendor ejecutar:
+- Para verificar flutter, dentro del contenedor ejecutar:
 ```bash
 flutter doctor
 ```
-- Para crear un proyecto con flutter, hacerlo dentro del contendor en la carpeta workspace, para ello ejecutar:
+- Para crear un proyecto con flutter, hacerlo dentro del contenedor en la carpeta workspace, para ello ejecutar:
  ```bash
 flutter create nombre_proyecto
 ```
