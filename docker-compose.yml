@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  server:
+    build:    
+      context: ./
+      dockerfile: Dockerfile
+    container_name: flutter_server
+    ports:
+      - 8014:5000
+    networks:
+        backend-flutter-net:
+            ipv4_address: 20.21.119.4
+    volumes:
+      - ./workspace:/home/developer/workspace
+      - type: bind
+        source: /dev/bus/usb
+        target: /dev/bus/usb
+    privileged: true
+    tty: true
+
+networks:
+    backend-flutter-net:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 20.21.119.0/26
